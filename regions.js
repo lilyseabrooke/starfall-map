@@ -42,7 +42,7 @@
         "The endless expanse of deep forest that sprawls out to the north of campus, full of ancient ley magic, beasts and fey, and old, forgotten secrets. Home to Boar House, herbalists, bestiologists, and cottagecore influencers.",
       facts: [
         ["House seat", "Boar House"],
-        ["Terrain", "Ancient woodland"],
+        ["Terrain", "Vast woodlands"],
       ],
       points: P("300,300 820,210 1230,230 1130,470 800,400 800,660 640,620 470,560 190,500"),
       label: [560, 400],
@@ -75,7 +75,7 @@
         "These cliffs transition quickly, from lush alpine peaks filled with mountainous creatures, into the imposing structure of Eagle House, and then rapidly into inhospitable crags like dragon’s fangs. The harsh terrain of the cliffs hides countless secrets and abandoned places.",
       facts: [
         ["House seat", "Eagle House"],
-        ["Terrain", "Sea cliffs · terraces"],
+        ["Terrain", "Rocky cliffs"],
       ],
       points: P("1230,230 1470,430 1500,760 1330,1040 1120,1000 1230,860 1150,770 1130,470"),
       label: [1320, 560],
@@ -108,7 +108,7 @@
         "The sharp crags of this region are rich with magic, and Dragon House lies nestled among the cemeteries and gravewood trees that fill this place, and the jagged wings of dragons fill the sky.",
       facts: [
         ["House seat", "Dragon House"],
-        ["Terrain", "Gem veins · ravines"],
+        ["Terrain", "Enchanted stony outcroppings"],
       ],
       points: P("800,400 1130,470 1150,770 800,660"),
       label: [1000, 575],
@@ -141,7 +141,7 @@
         "Relatively tranquil compared to the rest of the Academy, that’s only because most of the magic is below the surface here, whether the buried Old House underneath Dolphin House, or the ancient creatures that dwell deep in the lake. The lake’s scenic backdrop and sapphire-blue waters make it popular both for picnic dates and dramatic duel backgrounds.",
       facts: [
         ["House seat", "Dolphin House"],
-        ["Terrain", "Deep cold lake"],
+        ["Terrain", "Sapphire-blue waters"],
       ],
       points: P("190,500 470,560 640,620 520,790 700,970 520,1040 210,820"),
       label: [375, 760],
@@ -174,7 +174,7 @@
         "Everything that lies beyond the Citadel's walls is known as the Grounds, the open spaces filled with natural magic that stretches from Glimmerdeep Lake's farthest river reaches to the distant peaks of Ryker Cliffs. The area directly around the Citadel is common ground, with every House crossing it to reach the Citadel, and plenty of its own magics.",
       facts: [
         ["Holding", "Common Ward"],
-        ["Terrain", "Meadow · approach roads"],
+        ["Terrain", "Meadows and groves"],
       ],
       points: P("640,620 800,660 1150,770 1230,860 1120,1000 920,1090 520,1040 700,970 520,790"),
       label: [1055, 878],
