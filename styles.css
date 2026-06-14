@@ -445,6 +445,7 @@ button{ font-family:inherit; color:inherit; cursor:pointer; background:none; bor
     border-radius:14px 14px 0 0;
     box-shadow:0 -14px 34px rgba(0,0,0,.5), var(--inset-hi);
     padding:var(--space-4) var(--space-5);
+    width:100%; max-width:100%; box-sizing:border-box;
   }
   /* short drag-handle cue at the top of the sheet */
   .dossier::after{
