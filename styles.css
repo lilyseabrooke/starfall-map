@@ -437,16 +437,18 @@ button{ font-family:inherit; color:inherit; cursor:pointer; background:none; bor
 
 /* Mobile: dock the dossier as a bottom sheet, map fills the top half */
 @media (max-width:760px){
-  .submap{ grid-template-columns:minmax(0,1fr); grid-template-rows:1fr 48%; overflow:hidden; }
-  .submap__field{ min-width:0; overflow:hidden; }
-  .submap__field{ grid-row:1; grid-column:1; }
+  .submap{ display:block; overflow:hidden; }
+  .submap__field{
+    position:absolute; top:0; left:0; right:0; bottom:48%;
+    overflow:hidden;
+  }
   .dossier{
-    grid-row:2; grid-column:1;
+    position:absolute; bottom:0; left:0; right:0; height:48%;
     border-right:none; border-top:2px solid var(--hc-500);
     border-radius:14px 14px 0 0;
     box-shadow:0 -14px 34px rgba(0,0,0,.5), var(--inset-hi);
     padding:var(--space-4) var(--space-5);
-    width:100%; max-width:100%; min-width:0; box-sizing:border-box; overflow-x:hidden;
+    width:auto; max-width:100%; box-sizing:border-box; overflow-x:hidden;
   }
   /* short drag-handle cue at the top of the sheet */
   .dossier::after{
