@@ -435,11 +435,26 @@ button{ font-family:inherit; color:inherit; cursor:pointer; background:none; bor
   pointer-events:none; z-index:0; opacity:.05; }
 .watermark img{ width:min(58%,540px); height:auto; filter:saturate(0.2); }
 
-/* responsive-ish: collapse dossier on very narrow */
+/* Mobile: dock the dossier as a bottom sheet, map fills the top half */
 @media (max-width:760px){
-  .submap{ grid-template-columns:1fr; }
-  .dossier{ position:absolute; inset:0 auto 0 0; width:min(86%,340px); }
+  .submap{ grid-template-columns:1fr; grid-template-rows:1fr 48%; }
+  .submap__field{ grid-row:1; grid-column:1; }
+  .dossier{
+    grid-row:2; grid-column:1;
+    border-right:none; border-top:2px solid var(--hc-500);
+    border-radius:14px 14px 0 0;
+    box-shadow:0 -14px 34px rgba(0,0,0,.5), var(--inset-hi);
+    padding:var(--space-4) var(--space-5);
+  }
+  /* short drag-handle cue at the top of the sheet */
+  .dossier::after{
+    content:""; position:fixed; left:50%; transform:translateX(-50%);
+    margin-top:-6px; width:40px; height:4px; border-radius:var(--radius-pill);
+    background:color-mix(in oklab, var(--gold-500) 40%, transparent); pointer-events:none;
+  }
+  .dossier__name{ font-size:var(--text-xl); }
   .legend{ display:none; }
+  .submap.is-subediting .submap__field{ padding-right:0; }
 }
 
 /* =========================================================================
