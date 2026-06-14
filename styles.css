@@ -437,6 +437,12 @@ button{ font-family:inherit; color:inherit; cursor:pointer; background:none; bor
 
 /* Mobile: dock the dossier as a bottom sheet, map fills the top half */
 @media (max-width:760px){
+  /* Clip the atlas so topbar overflow can't widen the viewport */
+  .atlas{ overflow:hidden; }
+  /* Collapse topbar: hide breadcrumb, keep crest + title + fit btn */
+  .crumbs{ display:none; }
+  .topbar{ gap:var(--space-3); padding:0 var(--space-3); }
+
   .submap{ display:block; overflow:hidden; }
   .submap__field{
     position:absolute; top:0; left:0; right:0; bottom:48%;
