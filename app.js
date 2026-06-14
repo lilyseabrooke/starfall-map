@@ -911,6 +911,7 @@
     renderWorld();
     const lg = byId("legend"); if (lg) lg.hidden = false;
     const cl = byId("citadel-legend"); if (cl) cl.hidden = true;
+    const mb = byId("mobile-citadel-back"); if (mb) mb.hidden = true;
     fitWorld();
     setCrumbs([{ label: "Campus" }]);
   }
@@ -926,6 +927,7 @@
     });
     const lg = byId("legend"); if (lg) lg.hidden = true;
     const cl = byId("citadel-legend"); if (cl) cl.hidden = false;
+    const mb = byId("mobile-citadel-back"); if (mb) mb.hidden = false;
     fitWorld();
     setCrumbs([{ label: "Campus", go: exitCitadel }, { label: "Starfall Citadel" }]);
   }
@@ -1537,5 +1539,6 @@
   setCrumbs([{ label: "Campus" }]);
   initTweaks();
   var cBack = byId("citadel-back"); if (cBack) cBack.addEventListener("click", exitCitadel);
+  var mBack = byId("mobile-citadel-back"); if (mBack) mBack.addEventListener("click", exitCitadel);
   if (window.lucide) lucide.createIcons();
 })();

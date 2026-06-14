@@ -435,12 +435,27 @@ button{ font-family:inherit; color:inherit; cursor:pointer; background:none; bor
   pointer-events:none; z-index:0; opacity:.05; }
 .watermark img{ width:min(58%,540px); height:auto; filter:saturate(0.2); }
 
+/* Mobile Citadel back button — hidden on desktop, shown only on mobile */
+.mobile-back{ display:none; }
+
 /* Mobile: dock the dossier as a bottom sheet, map fills the top half */
 @media (max-width:760px){
   /* Clip the atlas so topbar overflow can't widen the viewport */
   .atlas{ overflow:hidden; }
   /* Collapse topbar: hide breadcrumb, keep crest + title + fit btn */
   .crumbs{ display:none; }
+  /* Mobile Citadel back button */
+  .mobile-back{
+    display:inline-flex; align-items:center; gap:8px;
+    top:24px; left:24px;
+    height:40px; padding:0 16px;
+    background:color-mix(in oklab, var(--ink-850) 92%, transparent);
+    border:1px solid var(--border-default); border-radius:var(--radius-sm);
+    color:var(--text-body); font-family:var(--font-sans); font-size:13px;
+    letter-spacing:.08em; text-transform:uppercase; backdrop-filter:blur(8px);
+    box-shadow:var(--shadow-md);
+  }
+  .mobile-back[hidden]{ display:none; }
   .topbar{ gap:var(--space-3); padding:0 var(--space-3); }
 
   .submap{ display:block; overflow:hidden; }
